@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace GameRentalApp.Models
 {
     [JsonDerivedType(typeof(PCGame), typeDiscriminator: "pc")]
+    [JsonDerivedType(typeof(StrategyGame), typeDiscriminator: "strategy")]
     [JsonDerivedType(typeof(ConsoleGame), typeDiscriminator: "console")]
     [JsonDerivedType(typeof(RetroGame), typeDiscriminator: "retro")]
     public abstract class GameItem

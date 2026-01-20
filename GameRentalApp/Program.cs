@@ -99,10 +99,11 @@ while (true)
                 Console.WriteLine("\nDODAWANIE NOWEJ GRY");
                 Console.WriteLine("Wybierz kategorię:");
                 Console.WriteLine("1. Gra PC");
-                Console.WriteLine("2. Gra na Konsolę");
-                Console.WriteLine("3. Gra Retro (Konsola)");
+                Console.WriteLine("2. Gra strategiczna (PC)");
+                Console.WriteLine("3. Gra na Konsolę");
+                Console.WriteLine("4. Gra Retro (Konsola)");
 
-                int type = ReadInt("Wybór (1-3): ");
+                int type = ReadInt("Wybór (1-4): ");
 
                 Console.Write("Tytuł gry: ");
                 string title = Console.ReadLine() ?? "Brak tytułu";
@@ -112,20 +113,32 @@ while (true)
                 {
                     case 1: // PC Game
                         {
+                            Console.Write("Podaj model karty graficznej (GPU): ");
                             string gpu = Console.ReadLine() ?? "Brak danych";
                             int ram = ReadInt("Wymagany RAM (GB): ");
                             manager.AddGame(new PCGame { Title = title, BaseDailyRate = rate, MinimumGpu = gpu, RamRequired = ram });
                             break;
                         }
 
-                    case 2: // Console Game
+                    case 2: // Strategy Game
+                        {
+                            Console.Write("Podaj model karty graficznej (GPU): ");
+                            string gpu = Console.ReadLine() ?? "Brak danych";
+                            int ram = ReadInt("Wymagany RAM (GB): ");
+                            Console.Write("Czy to strategia czasu rzeczywistego? (t/n): ");
+                            bool rts = Console.ReadLine()?.ToLower() == "t";
+                            manager.AddGame(new StrategyGame { Title = title, BaseDailyRate = rate, MinimumGpu = gpu, RamRequired = ram, IsRealTime = rts });
+                            break;
+                        }
+
+                    case 3: // Console Game
                         {
                             Console.Write("Typ konsoli (np. PS5, Xbox): ");
                             string cType = Console.ReadLine() ?? "Inna";
                             manager.AddGame(new ConsoleGame { Title = title, BaseDailyRate = rate, ConsoleType = cType });
                             break;
                         }
-                    case 3: // Retro Game
+                    case 4: // Retro Game
                         {
                             Console.Write("Typ konsoli: ");
                             string cType = Console.ReadLine() ?? "Inna";

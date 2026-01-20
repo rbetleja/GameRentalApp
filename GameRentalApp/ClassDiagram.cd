@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameRentalApp.Models.GameItem" Collapsed="true">
+    <Position X="9" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Models\GameItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRentalApp.Models.PCGame" Collapsed="true">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Models\PCGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRentalApp.Models.ConsoleGame" Collapsed="true">
+    <Position X="10.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ConsoleGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRentalApp.Models.RetroGame" Collapsed="true">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RetroGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRentalApp.Models.Customer" Collapsed="true">
+    <Position X="9" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRentalApp.Models.Rental" Collapsed="true">
+    <Position X="9" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAAAAAAAAABAEAAAAAAAAAABAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\Rental.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRentalApp.Services.RentalManager" Collapsed="true">
+    <Position X="9" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAkAgIAAAAAQAAAAAAAAAAAAACQAAAAAAAEAAABAAAA=</HashCode>
+      <FileName>Services\RentalManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRentalApp.Models.StrategyGame" Collapsed="true">
+    <Position X="12.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\StrategyGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
