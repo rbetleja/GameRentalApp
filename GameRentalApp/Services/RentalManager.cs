@@ -38,8 +38,8 @@ public class RentalManager
         }
     }
 
-    public void AddGame(GameItem g) { g.Id = Games.Count > 0 ? Games.Max(x => x.Id) + 1 : 1; Games.Add(g); }
-    public void AddCustomer(Customer c) { c.Id = Customers.Count > 0 ? Customers.Max(x => x.Id) + 1 : 1; Customers.Add(c); }
+    public void AddGame(GameItem g) { g.Id = Games.Count + 1; Games.Add(g); }
+    public void AddCustomer(Customer c) { c.Id = Customers.Count + 1; Customers.Add(c); }
 
     public string RentGame(int gId, int cId, int days)
     {
@@ -55,7 +55,7 @@ public class RentalManager
         game.IsAvailable = false;
         Rentals.Add(new Rental
         {
-            Id = Rentals.Count > 0 ? Rentals.Max(x => x.Id) + 1 : 1,
+            Id = Rentals.Count + 1,
             GameId = gId,
             CustomerId = cId,
             RentalDate = DateTime.Now,
