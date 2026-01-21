@@ -36,7 +36,7 @@ while (true)
             {
                 Console.Write("Imię i nazwisko: "); string name = Console.ReadLine() ?? "";
                 Console.Write("Email: "); string email = Console.ReadLine() ?? "";
-                if (string.IsNullOrWhiteSpace(name)) Console.WriteLine("Błąd: Imię nie może być puste!");
+                if (string.IsNullOrWhiteSpace(name)) Console.WriteLine("Błąd: Pole 'Imię i nazwisko' nie może być puste!");
                 else
                 {
                     manager.AddCustomer(new Customer { FullName = name, Email = email });
@@ -73,7 +73,7 @@ while (true)
             {
                 Console.WriteLine("\nLISTA ZAREJESTROWANYCH KLIENTÓW");
 
-                if (!manager.Customers.Any())
+                if (manager.Customers.Count == 0)
                 {
                     Console.WriteLine("Baza klientów jest pusta.");
                 }
@@ -85,8 +85,8 @@ while (true)
                     foreach (var c in manager.Customers)
                     {
                         string id = c.Id.ToString().PadRight(5);
-                        string name = (c.FullName ?? "Brak danych").PadRight(25);
-                        string email = c.Email ?? "Brak adresu";
+                        string name = (c.FullName).PadRight(25);
+                        string email = c.Email.Length == 0 ? "Brak adresu" : c.Email;
 
                         Console.WriteLine($"{id} | {name} | {email}");
                     }
