@@ -27,9 +27,9 @@ public class RentalManager
 
             if (loadedData != null)
             {
-                this.Games = loadedData.Games ?? new List<GameItem>();
-                this.Customers = loadedData.Customers ?? new List<Customer>();
-                this.Rentals = loadedData.Rentals ?? new List<Rental>();
+                Games = loadedData.Games;
+                Customers = loadedData.Customers;
+                Rentals = loadedData.Rentals;
             }
         }
         catch (Exception ex)

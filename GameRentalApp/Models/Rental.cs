@@ -13,6 +13,6 @@ namespace GameRentalApp.Models
         public int CustomerId { get; set; }
         public DateTime RentalDate { get; set; }
         public DateTime Deadline { get; set; }
-        public bool IsReturned { get; set; } = false;
+        public bool IsReturned { get; set; }
     }
 }
